@@ -63,12 +63,16 @@ class SitiosController extends Controller
     	 ]);
 
 		$sitio = Sitio::find($request->id);
+		
 		//$sitio->id = 1;
-		$sitio->nombre = $request->name;
+		$sitio->nombre = $request->nombre;
 		$sitio->lat = $request->lat;
 		$sitio->lon = $request->lon;
 		$sitio->descripcion = $request->descripcion;
+
 		$sitio->save();
+
+		return Response()->json(['estado'=>1]);
 
 	}
 }

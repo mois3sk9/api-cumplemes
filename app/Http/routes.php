@@ -29,7 +29,7 @@ $app->delete('sitios/remove', [
 	'middleware' => 'auth',
 	'uses' => 'SitiosController@remove'
 ]);
-$app->get('sitios/update', [
+$app->post('sitios/update', [
 	'middleware' => 'auth',
 	'uses' => 'SitiosController@update'
 ]);
